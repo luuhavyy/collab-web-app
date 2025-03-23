@@ -1,0 +1,24 @@
+ <!-- Đánh giá sản phẩm -->
+ <div class="reviews">
+    <h2>Đánh giá</h2>
+    <div *ngFor="let review of reviews">
+      <div class="review">
+        <img [src]="review.customer?.avatar || 'assets/images/user-avatar.jpeg'" alt="Avatar" />
+        <div>
+          <h4>{{ review.customer?.first_name }}</h4>
+          <p>⭐ {{ review.rating }}/5</p>
+          <p>{{ review.comment }}</p>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Viết đánh giá -->
+    <div class="add-review">
+      <textarea #reviewText placeholder="Viết đánh giá..."></textarea>
+      <select #reviewRating>
+        <option *ngFor="let star of [5, 4, 3, 2, 1]" [value]="star">{{ star }} ⭐</option>
+      </select>
+      <button (click)="submitReview(reviewText.value, reviewRating.value)">Gửi</button>
+    </div>
+  </div>

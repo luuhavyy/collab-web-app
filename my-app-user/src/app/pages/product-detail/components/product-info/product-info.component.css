@@ -1,0 +1,162 @@
+/* Hàng trên: hình ảnh + thông tin sản phẩm */
+.product-top {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+  }
+  
+  
+  /* Hình ảnh sản phẩm bên trái */
+  .product-image {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  .product-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  
+  /* Thông tin sản phẩm bên phải */
+  .product-info {
+    flex: 2;
+  }
+  
+  
+  .product-info h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  
+  .rating {
+    font-size: 18px;
+    color: #f39c12;
+    margin-bottom: 10px;
+  }
+  
+  
+  .product-category {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  
+  .price {
+    font-size: 22px;
+    color: #e74c3c;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+  
+  /* Màu sắc */
+  .colors {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 15px 0;
+  }
+  
+  
+  .colors img {
+    width: 40px;
+    height: 40px;
+    border-radius: 5%;
+    cursor: pointer;
+    transition: 0.3s;
+    border: 2px solid transparent;
+  }
+  
+  
+  .colors img:hover {
+    transform: scale(1.1);
+  }
+  
+  
+  /* Chỉ thêm viền khi màu được chọn */
+  .colors img.selected {
+    border: 2px solid #063B06;
+  }
+  
+  
+  /* ✅ Điều chỉnh số lượng */
+  .quantity {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 15px 0;
+  }
+  
+  
+  .quantity button {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    background: #ddd;
+    border-radius: 5px;
+    line-height: 1;
+  }
+  
+  
+  .quantity button:hover {
+    background: #bbbbbb94;
+  }
+  
+  
+  .quantity span {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  
+  /* Nút bấm */
+  button {
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: 0.3s;
+    margin-top: 10px;
+  }
+  
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  
+  button:nth-child(1) {
+    background: #063B06;
+    color: white;
+  }
+  
+  
+  button:nth-child(2) {
+    background: #063B06;
+    color: white;
+    margin-left: 20px;
+  }
+  
+  
+  /* Mô tả sản phẩm */
+  .description {
+    font-size: 16px;
+    color: #444;
+    margin-top: 10px;
+    line-height: 1.6;
+  }
+  

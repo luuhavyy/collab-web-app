@@ -1,0 +1,47 @@
+<!-- Hình ảnh sản phẩm -->
+<div class="product-top">
+    <div class="product-image">
+      <img [src]="product.product_image"/>
+    </div>
+
+
+    <!-- Thông tin sản phẩm -->
+    <div class="product-info">
+      <h1>{{ product.product_name }}</h1>
+      <div class="rating" *ngIf="+product.average_rating !== 0">
+        ⭐ {{ product.average_rating }}/5
+      </div>
+      <div class="rating" *ngIf="+product.average_rating === 0">
+        ⭐ -/5
+      </div>
+      
+      <p class="product-category">{{ product.category }}</p>
+      <p class="price">{{ convertPrice(product.price) | currency:'VND' }}</p>
+
+
+      <!-- Màu sắc -->
+      <div class="colors">
+        <p>Màu sắc: {{product.colour}}</p>
+      </div>
+
+
+      <!-- Điều chỉnh số lượng -->
+      <div class="quantity">
+        <button (click)="decreaseQuantity()">-</button>
+        <span>{{ quantity }}</span>
+        <button (click)="increaseQuantity()">+</button>
+      </div>
+
+
+      <!-- Nút thêm vào yêu thích và giỏ hàng -->
+      <div>
+        <button (click)="toggleWishlist()">Thêm vào yêu thích</button>
+        <button (click)="addToCart()">Thêm vào giỏ hàng</button>
+      </div>
+
+
+      <!-- Mô tả sản phẩm -->
+      <p class="description">Mô tả: {{ product.description }}</p>
+    </div>
+</div>
+

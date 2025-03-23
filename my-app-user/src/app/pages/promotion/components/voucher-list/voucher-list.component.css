@@ -1,0 +1,73 @@
+ /* Danh sách voucher */
+ .voucher-section {
+    margin-top: 40px;
+  }
+  
+  .voucher-section h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .voucher-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .voucher-card {
+    background: #e5f6e5;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid #1b5e20;
+  }
+  
+  .voucher-header {
+    background: #1b5e20;
+    color: white;
+    padding: 5px 0;
+    font-weight: bold;
+    border-radius: 5px;
+  }
+  
+  .voucher-content {
+    margin: 10px 0;
+  }
+  
+  .voucher-discount {
+    font-size: 20px;
+    font-weight: bold;
+    color: #0d4d00;
+  }
+  
+  .voucher-code {
+    font-size: 18px;
+    font-weight: bold;
+    color: #063B06; 
+  }
+  
+  .voucher-expiry {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .save-btn {
+    background: #063B06;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .save-btn:hover {
+    opacity: 0.8;
+  }
+  
+  .save-btn.saved {
+    background: #f0f8f0 !important; 
+    color: #063B06 !important; 
+    cursor: default;
+    pointer-events: none; 
+  }

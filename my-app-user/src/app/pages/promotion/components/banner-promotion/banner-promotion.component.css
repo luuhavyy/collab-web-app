@@ -1,0 +1,110 @@
+ /* Banner */
+ .banner {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 20px;
+  }
+ 
+  .banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+ 
+  .banner-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+ 
+  .banner-content h1 {
+    font-size: 32px;
+    font-weight: bold;
+  }
+ 
+  .banner-content p {
+    font-size: 18px;
+  }
+ 
+  /* Danh sách banner khuyến mãi */
+/* Vùng chứa chính */
+.promo-content {
+    display: flex;
+    align-items: stretch;
+    background-color: #e5f6e5;
+    gap: 0;
+    padding: 0;
+    text-align: left;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+
+/* Phần hình ảnh */
+.promo-image {
+    width: 50%;
+    height: auto;
+    flex-shrink: 0;
+}
+
+
+.promo-image img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    
+}
+
+
+/* Phần nội dung */
+.promo-info {
+    flex: 1;
+    background-color: #e5f6e5;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/* Tiêu đề của nội dung */
+.promo-info h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+/* Văn bản mô tả */
+.promo-info p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding: 10px;
+    line-height: 1.5;
+    text-align: justify;
+}
+ 
+/* Nút "Mua ngay" */
+.learn-more-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #063B06;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+
+.learn-more-btn:hover {
+    opacity: 0.8;
+  }

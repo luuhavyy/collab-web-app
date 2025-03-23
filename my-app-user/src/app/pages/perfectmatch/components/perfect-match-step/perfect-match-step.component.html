@@ -1,0 +1,133 @@
+<!-- Thanh progress bar -->
+<div class="progress-bar">
+    <div class="progress" [style.width.%]="progress"></div>
+  </div>
+  
+  <!-- Các bước -->
+  
+  <!-- Step 1: Chọn kính theo gương mặt hoặc xu hướng -->
+  <div *ngIf="currentStep === 1" class="step-content">
+    <h2>Bạn muốn kính của bạn là</h2>
+  
+    <div class="choice-container">
+      <div class="choice" [class.selected]="selectedFaceShape === 'face'" (click)="selectFaceShape('face')">
+        <img src="assets/images/face-shape.png" alt="Theo gương mặt">
+        <h3>Theo gương mặt</h3>
+      </div>
+    </div>
+  
+    <button class="btn-next" [disabled]="!selectedFaceShape" (click)="nextStep()">Tiếp tục</button>
+  </div>
+  
+  <!-- Step 2: Chọn giới tính -->
+  <div *ngIf="currentStep === 2" class="step-content">
+    <h2>Hãy chọn giới tính của bạn</h2>
+  
+    <div class="choice-container">
+      <div class="choice" [class.selected]="selectedGender === 'nu'" (click)="selectGender('nu')">
+        <img src="assets/images/female.png" alt="Nữ">
+        <h3>Nữ</h3>
+      </div>
+      <div class="choice" [class.selected]="selectedGender === 'nam'" (click)="selectGender('nam')">
+        <img src="assets/images/male.png" alt="Nam">
+        <h3>Nam</h3>
+      </div>
+    </div>
+  
+    <div class="button-group">
+      <button class="btn-back" (click)="prevStep()">Quay lại</button>
+      <button class="btn-next" [disabled]="!selectedGender" (click)="nextStep()">Tiếp tục</button>
+    </div>
+  </div>
+  
+  <!-- Step 3: Chọn kiểu mặt -->
+  <div *ngIf="currentStep === 3" class="step-content">
+    <h2>Hãy chọn kiểu mặt của bạn</h2>
+  
+    <div class="choice-container-face-shape">
+      <div class="choice" [class.selected]="selectedFaceShape === 'kim-cuong'" (click)="selectFaceShape('kim-cuong')">
+        <img src="assets/images/diamond-shape.png" alt="Kim cương">
+      </div>
+      <div class="choice" [class.selected]="selectedFaceShape === 'trai-tim'" (click)="selectFaceShape('trai-tim')">
+        <img src="assets/images/heart-shape.png" alt="Trái tim">
+      </div>
+      <div class="choice" [class.selected]="selectedFaceShape === 'trai-xoan'" (click)="selectFaceShape('trai-xoan')">
+        <img src="assets/images/oval-shape.png" alt="Trái xoan">
+      </div>
+      <div class="choice" [class.selected]="selectedFaceShape === 'chu-nhat'" (click)="selectFaceShape('chu-nhat')">
+        <img src="assets/images/rectangle-shape.png" alt="Chữ nhật">
+      </div>
+      <div class="choice" [class.selected]="selectedFaceShape === 'tron'" (click)="selectFaceShape('tron')">
+        <img src="assets/images/round-shape.png" alt="Tròn">
+      </div>
+      <div class="choice" [class.selected]="selectedFaceShape === 'vuong'" (click)="selectFaceShape('vuong')">
+        <img src="assets/images/square-shape.png" alt="Vuông">
+      </div>
+    </div>
+  
+    <div class="button-group">
+      <button class="btn-back" (click)="prevStep()">Quay lại</button>
+      <button class="btn-next" [disabled]="!selectedFaceShape" (click)="nextStep()">Tiếp tục</button>
+    </div>
+  </div>
+  
+  <!-- Step 4: Chọn chất liệu -->
+  <div *ngIf="currentStep === 4" class="step-content">
+    <h2>Hãy chọn chất liệu bạn muốn</h2>
+  
+    <div class="choice-container">
+      <div class="choice" [class.selected]="selectedMaterial === 'nhua'" (click)="selectMaterial('nhua')">
+        <img src="assets/images/plastic-material.png" alt="Nhựa">
+        <h3>Nhựa</h3>
+      </div>
+      <div class="choice" [class.selected]="selectedMaterial === 'kim-loai'" (click)="selectMaterial('kim-loai')">
+        <img src="assets/images/metal-material.png" alt="Kim loại">
+        <h3>Kim loại</h3>
+      </div>
+    </div>
+  
+    <div class="button-group">
+      <button class="btn-back" (click)="prevStep()">Quay lại</button>
+      <button class="btn-next" [disabled]="!selectedMaterial" (click)="nextStep()">Tiếp tục</button>
+    </div>
+  </div>
+  
+  <!-- Step 5: Loading -->
+  <div *ngIf="currentStep === 5" class="step-content">
+    <h2>Đang tìm kiếm kính phù hợp...</h2>
+    <div class="loading-spinner"></div>
+  </div>
+  
+  <!-- Step 6: Gợi ý kính phù hợp -->
+  <div *ngIf="currentStep === 6" class="step-content">
+    <h2>Gợi ý kính phù hợp</h2>
+    <p>Đây là danh sách kính dựa trên lựa chọn của bạn.</p>
+  
+    <div class="product-grid">
+      <div class="product-item" *ngFor="let product of recommendedProducts">
+        <button class="wishlist-btn" (click)="toggleWishlist(product)">
+          <img [src]="product.isWishlisted ? 'assets/images/heart-filled.png' : 'assets/images/heart-outline.png'" 
+               alt="Wishlist" />
+        </button>
+        <a [routerLink]="['/product', product._id]">
+          <img [src]="product.product_image" alt="{{ product.product_name }}" />
+        </a>
+        <div class="product-info">
+          <h3><a [routerLink]="['/product', product._id]">{{ product.product_name }}</a></h3>
+          <p>{{ convertPrice(product.price) | currency:'VND' }}</p>
+          <div class="rating" *ngIf="+product.average_rating !== 0">
+            ⭐ {{ product.average_rating }}/5
+          </div>
+          <div class="rating" *ngIf="+product.average_rating === 0">
+            ⭐ -/5
+          </div>
+          <button class="add-to-cart" (click)="addToCart(product)">
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+      </div>
+    </div>
+  
+    <button class="btn-next" (click)="restart()">Bắt đầu lại</button>
+  </div>
+  

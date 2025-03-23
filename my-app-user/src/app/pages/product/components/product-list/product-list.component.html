@@ -1,0 +1,58 @@
+<!-- Bộ lọc -->
+<div class="filters">
+  <select [(ngModel)]="filterCategory" (ngModelChange)="applyFilters()">
+    <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
+  </select>
+
+  <select [(ngModel)]="sortType" (change)="applySorting()">
+      <option value="default">Mọi giá</option>
+      <option value="low-to-high">Giá thấp đến cao</option>
+      <option value="high-to-low">Giá cao đến thấp</option>
+  </select>
+</div>
+
+<!-- Danh sách sản phẩm -->
+<div class="product-grid">
+<div class="product-item" *ngFor="let product of displayedProducts">
+  <button class="wishlist-btn" (click)="toggleWishlist(product)">
+    <img [src]="isWishlisted(product) ? 'assets/images/heart-filled.png' : 'assets/images/heart-outline.png'" 
+         alt="Wishlist" />
+  </button>
+  <a [routerLink]="['/product', product._id]">
+      <img [src]="product.product_image"/>
+  </a>
+  <div class="product-info">
+    <h3><a [routerLink]="['/product', product._id]">{{ product.product_name }}</a></h3>
+    <p>{{ convertPrice(product.price) | currency:'VND' }}</p>
+    <div class="rating" *ngIf="+product.average_rating !== 0">
+      ⭐ {{ product.average_rating }}/5
+    </div>
+    <div class="rating" *ngIf="+product.average_rating === 0">
+      ⭐ -/5
+    </div>
+          <button class="add-to-cart" (click)="addToCart(product)">
+        Thêm vào giỏ hàng
+     </button>
+    </div>
+</div>
+</div>
+
+<!-- Thông báo nếu không có sản phẩm nào -->
+<ng-template #noProduct>
+  <p class="no-product-message">Không tìm thấy sản phẩm nào.</p>
+</ng-template>
+
+<!-- Thanh phân trang -->
+<div class="pagination">
+<button (click)="changePage(1)">«</button>
+<button (click)="changePage(currentPage - 1)">‹</button>
+
+<button *ngFor="let page of [].constructor(totalPages); let i = index" 
+        [class.active]="currentPage === i + 1" 
+        (click)="changePage(i + 1)">
+  {{ i + 1 }}
+</button>
+
+<button (click)="changePage(currentPage + 1)">›</button>
+<button (click)="changePage(totalPages)">»</button>
+</div>

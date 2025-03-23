@@ -1,0 +1,17 @@
+ <!-- Danh sách Voucher -->
+ <div class="voucher-section">
+    <h3>Danh sách Voucher</h3>
+    <div class="voucher-grid">
+      <div class="voucher-card" *ngFor="let voucher of vouchers">
+        <div class="voucher-header">
+          <span class="voucher-title">{{ voucher.promotion_title }}</span>
+        </div>
+        <div class="voucher-content">
+          <p class="voucher-discount">{{ voucher.discount_percent }}% OFF</p>
+          <p class="voucher-code">Mã: <strong>{{ voucher.promotion_code }}</strong></p>
+          <p class="voucher-expiry">HSD: {{ voucher.end_date }}</p>
+        </div>
+        <button class="save-btn" (click)="saveVoucher(voucher, $event)">Lưu Voucher</button>
+      </div>
+    </div>
+  </div>
