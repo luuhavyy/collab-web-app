@@ -1,0 +1,31 @@
+.link {
+    color: #2980b9;
+    text-decoration: none;
+    font-weight: bold;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .contact-info {
+    text-align: center;
+    background-color: #f5f5f5;
+    padding: 40px 20px;
+    margin: 40px 0;
+    border-radius: 10px;
+}
+
+.contact-info h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    font-size: 16px;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}

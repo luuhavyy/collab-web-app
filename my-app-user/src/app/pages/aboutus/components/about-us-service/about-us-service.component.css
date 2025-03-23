@@ -1,0 +1,48 @@
+/* Phần liên hệ */
+.contact-title {
+    font-size: 24px;
+    margin: 50px 0 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.contact-box {
+    text-align: center;
+    background-color: #e5f6e5;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Icon trong liên hệ */
+.icon {
+    font-size: 24px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.icon-img {
+    width: 50px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+
+/* Dịch vụ hỗ trợ */
+.services {
+    display: flex;
+    justify-content: space-around;
+    background-color: #e5f6e5;
+    padding: 20px;
+    margin-top: 50px;
+    border-radius: 10px;
+}
+
+.service-item {
+    text-align: center;
+}

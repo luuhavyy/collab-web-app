@@ -1,0 +1,14 @@
+<div class="blog-detail" *ngIf="blogDetail">
+    <!-- Tiêu đề bài viết -->
+    <h1>{{ blogDetail.title }}</h1>
+    <p class="blog-meta">
+      <span>{{ blogDetail.author }}</span> | 
+      <span>{{ blogDetail.published_at }}</span>
+    </p>
+  
+    <!-- Hình ảnh chính -->
+    <img class="main-image" [src]="blogDetail.thumbnail">
+  
+    <!-- Nội dung bài viết -->
+    <div class="blog-content" [innerHTML]="blogDetail.content"></div>
+  

@@ -1,0 +1,15 @@
+<!-- Mục bài viết bạn có thể thích -->
+<div class="related-blogs">
+    <h3>Bạn có lẽ sẽ thích</h3>
+    <div class="related-list">
+      <div class="related-item" *ngFor="let blog of recommendedBlogs" (click)="goToBlogDetail(blog.id)">
+        <img [src]="blog.thumbnail" alt="{{ blog.title }}">
+        <h4>{{ blog.title }}</h4>
+      </div>
+    </div>
+  </div>
+
+  <!-- Button xem thêm -->
+  <div class="load-more">
+    <button (click)="goToBlogList()">Xem thêm bài viết</button>
+  </div>

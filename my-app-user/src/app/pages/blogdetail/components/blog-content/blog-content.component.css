@@ -1,0 +1,41 @@
+.blog-detail {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  
+    h1 {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+  
+    .blog-meta {
+      font-size: 14px;
+      color: gray;
+      margin-bottom: 20px;
+    }
+  
+    .main-image {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+  
+    .blog-content {
+      font-size: 16px;
+      line-height: 1.6;
+  
+      h2 {
+        font-size: 22px;
+        margin-top: 20px;
+      }
+  
+      img {
+        width: 100%;
+        height: auto;
+        margin-top: 10px;
+        border-radius: 5px;
+      }
+    }
+}

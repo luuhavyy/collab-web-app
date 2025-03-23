@@ -1,0 +1,141 @@
+.blog {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .banner {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .banner-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+  
+  .banner-content h1 {
+    font-size: 32px;
+    font-weight: bold;
+  }
+  
+  .banner-content p {
+    font-size: 18px;
+  }
+  
+  .blog-list {
+    margin-top: 20px;
+  }
+  
+  .blog-list h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    text-align: center;
+  }
+
+  .category-filter {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .category-filter button {
+    background: #eee;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    border-radius: 20px;
+  }
+  
+  .category-filter button.active {
+    background: #063B06;
+    color: white;
+  }
+  
+  .category-filter button:hover {
+    opacity: 0.8;
+  }
+  
+  .blog-item {
+    border: 1px solid #ddd;
+    padding: 15px;
+    background: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .blog-item {
+    background-color: #EBEDEF;
+    padding: 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: black;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .blog-item:hover {
+    transform: translateY(-5px);
+  }
+  
+  .blog-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  .blog-item h4 {
+    margin-top: 10px;
+    font-size: 18px;
+  }
+  
+  .blog-item p {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .load-more {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .load-more button {
+    background-color: #063B06;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+  }
+  
+  .load-more button:hover {
+    opacity: 0.8;
+  }
+  

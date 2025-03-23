@@ -1,0 +1,195 @@
+.aboutus {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Banner */
+.banner {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.banner-content h1 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.banner-content p {
+    font-size: 18px;
+}
+
+/* Tiêu đề chính */
+.title {
+    font-size: 45px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    padding-top: 30px;
+}
+
+.description {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 40px;
+    text-align: justify;
+    padding-top: 10px;
+    line-height: 1.5;
+}
+
+.icon-img {
+    width: 50px; 
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Vùng chứa chính */
+.aboutus-content {
+    display: flex;
+    align-items: stretch; 
+    background-color: #e5f6e5;
+    gap: 0; 
+    padding: 0; 
+    text-align: left;
+    border-radius: 10px;
+    overflow: hidden; 
+}
+
+/* Phần hình ảnh */
+.aboutus-image {
+    width: 50%;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.aboutus-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+/* Phần nội dung */
+.aboutus-info {
+    flex: 1;
+    background-color: #e5f6e5;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Tiêu đề của nội dung */
+.aboutus-info h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Văn bản mô tả */
+.aboutus-info p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+/* Phần giới thiệu Perfect Match */
+.perfect-match-section {
+    text-align: center;
+    background-color: #f5f5f5;
+    padding: 40px 20px;
+    margin: 40px 0;
+    border-radius: 10px;
+}
+
+.perfect-match-section h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.perfect-match-section p {
+    font-size: 16px;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Nút "Mua ngay" */
+.learn-more-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #063B06;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.learn-more-btn:hover {
+    opacity: 0.8;
+  }
+
+/* Phần liên hệ */
+.contact-title {
+    font-size: 24px;
+    margin: 50px 0 20px;
+    padding-bottom: 20px;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.contact-box {
+    text-align: center;
+    background-color: #e5f6e5;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Icon trong liên hệ */
+.icon {
+    font-size: 24px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Dịch vụ hỗ trợ */
+.services {
+    display: flex;
+    justify-content: space-around;
+    background-color: #e5f6e5;
+    padding: 20px;
+    margin-top: 50px;
+    border-radius: 10px;
+}
+
+.service-item {
+    text-align: center;
+}

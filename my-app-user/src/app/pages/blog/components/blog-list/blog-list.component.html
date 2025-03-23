@@ -1,0 +1,27 @@
+<!-- Bộ lọc danh mục -->
+<div class="category-filter">
+    <button *ngFor="let cat of categories" 
+            [class.active]="selectedCategory === cat" 
+            (click)="filterByCategory(cat)">
+      {{ cat }}
+    </button>
+  </div>
+
+  <!-- Danh sách bài viết -->
+  <div class="blog-list">
+    <h3>Bài viết mới nhất</h3>
+    <div class="blog-grid">
+      <div *ngFor="let blog of filteredBlogs" class="blog-item">
+        <a [routerLink]="['/blog', blog._id]">
+          <img [src]="blog.thumbnail" alt="{{ blog.title }}" />
+          <h4>{{ blog.title }}</h4>
+          <p>{{ blog.published_at }}</p>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Nút xem thêm -->
+  <div class="load-more">
+    <button (click)="loadMore()">Xem Thêm</button>
+  </div>

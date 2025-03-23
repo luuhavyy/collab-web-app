@@ -1,0 +1,26 @@
+/* Dịch vụ hỗ trợ */
+.icon {
+    font-size: 24px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.icon-img {
+    width: 50px; 
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.services {
+    display: flex;
+    justify-content: space-around;
+    background-color: #e5f6e5;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+}
+
+.service-item {
+    text-align: center;
+}

@@ -1,0 +1,25 @@
+    <!--  Banner Slider -->
+    <div class="banner">
+        <div class="slides" [ngStyle]="{'transform': 'translateX(' + (-currentIndex * 100) + '%)'}">
+            <div class="slide">
+                <img src="assets/images/home-banner1.png" alt="Banner 1">
+            </div>
+            <div class="slide">
+                <img src="assets/images/home-banner2.png" alt="Banner 2">
+            </div>
+            <div class="slide">
+                <img src="assets/images/home-banner3.png" alt="Banner 3">
+            </div>
+        </div>
+
+        <!-- Nút điều hướng -->
+        <button class="prev" (click)="prevSlide()">&#10094;</button>
+        <button class="next" (click)="nextSlide()">&#10095;</button>
+
+        <!-- Thanh chỉ báo -->
+        <div class="dots">
+            <span class="dot" [class.active]="currentIndex === 0" (click)="goToSlide(0)"></span>
+            <span class="dot" [class.active]="currentIndex === 1" (click)="goToSlide(1)"></span>
+            <span class="dot" [class.active]="currentIndex === 2" (click)="goToSlide(2)"></span>
+        </div>
+    </div>
