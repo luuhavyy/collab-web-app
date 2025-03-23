@@ -1,0 +1,53 @@
+<div class="login-container">
+    <!-- Phần logo bên trái -->
+    <div class="logo-section">
+      <img src="assets/image/logo (2).png" class="logo" />
+    </div>
+  
+    <!-- Phần form đăng nhập bên phải -->
+    <div class="form-section">
+      <form (submit)="onSubmit()">
+        <h2 class="title">Đăng nhập</h2>
+        <p class="subtitle">Vui lòng sử dụng đúng mã nhân viên được cung cấp cho bạn</p>
+  
+        <!-- Ô nhập tên đăng nhập -->
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" [(ngModel)]="email" name="email" required />
+        </div>
+  
+        <!-- Ô nhập mật khẩu -->
+        <div class="input-group">
+          <label for="password">Mật khẩu</label>
+          <div class="password-wrapper">
+            <input [type]="passwordFieldType" id="password" [(ngModel)]="password" name="password" required />
+            <span class="toggle-password" (click)="togglePassword()">
+              <i class="material-icons">
+                {{ passwordFieldType === 'password' ? 'visibility' : 'visibility_off' }}
+              </i>
+            </span>              
+          </div>
+        </div>
+  
+        <!-- Ghi nhớ tài khoản & Quên mật khẩu -->
+        <div class="options">
+          <label>
+            <input type="checkbox" [(ngModel)]="rememberMe" name="rememberMe" />
+            Lưu tài khoản
+          </label>
+          <a routerLink="/forgot-password" class="forgot-password" (click)="$event.preventDefault()">Quên mật khẩu?</a>
+        </div>
+  
+        <!-- Nút đăng nhập -->
+        <button type="submit" class="login-button">Đăng nhập</button>
+      </form>
+    </div>
+  </div>
+  
+  <!-- Popup -->
+<div class="popup-overlay" *ngIf="showPopup">
+  <div class="popup-content">
+    <p>{{ popupMessage }}</p>
+    <button (click)="closePopup()">Đóng</button>
+  </div>
+</div>

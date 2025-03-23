@@ -1,0 +1,44 @@
+<div class="blog-container">
+  <h2>Quản lý bài viết</h2>
+  <div class="blog-controls">
+    <button (click)="toggleAllBlogs()">
+      {{ showAll ? 'Ẩn bớt' : 'Tất cả blog' }}
+    </button>
+    <button class="add-blog-btn" (click)="navigateToAddBlog()">Thêm Blog</button>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Tiêu đề</th>
+        <th>Thể loại</th>
+        <th>Tác giả</th>
+        <th>Thao tác</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let blog of paginatedBlogs">
+        <td>{{ blog.title }}</td>
+        <td>{{ blog.category }}</td>
+        <td>{{ blog.author || 'Unknown' }}</td>
+        <td>
+          <button (click)="openEditBlog(blog)">✏️</button>
+          <button (click)="confirmDelete(blog)">🗑️</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="pagination" *ngIf="showAll">
+    <button (click)="prevPage()" [disabled]="currentPage === 1">←</button>
+    <button (click)="nextPage()" [disabled]="currentPage === totalPages">→</button>
+  </div>
+</div>
+
+<div *ngIf="showConfirmDelete" class="popup">
+  <p>Bạn có chắc chắn muốn xóa bài viết "{{ selectedBlog?.title }}" không?</p>
+  <div class="button-group">
+    <button (click)="deleteBlog()">✅ Xác nhận</button>
+    <button (click)="hideDeletePopup()">❌ Hủy</button>
+  </div>
+</div>

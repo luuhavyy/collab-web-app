@@ -1,0 +1,28 @@
+<aside [class.collapsed]="isCollapsed">
+  <div class="sidebar-header">
+    <h3>Collab</h3>
+    <button class="toggle-btn" (click)="toggleSidebar()">❮</button>
+  </div>
+
+  <div class="menu">
+    <button routerLink="/dashboard" routerLinkActive="active">
+      <i class="icon">🔗</i> <span>Dashboard</span>
+    </button>
+    <button routerLink="/product" routerLinkActive="active">
+      <i class="icon">📦</i> <span>Sản phẩm</span>
+    </button>
+    <button routerLink="/promotions" routerLinkActive="active">
+      <i class="icon">📅</i> <span>Chương trình giảm giá</span>
+      <span class="icon"></span>
+    </button>
+    <button routerLink="/order" routerLinkActive="active">
+      <i class="icon">🚚</i> <span>Đơn hàng</span>
+    </button>
+    <button routerLink="/admin-account" routerLinkActive="active">
+      <i class="icon">⚙️</i> <span>Quản lý tài khoản</span>
+    </button>
+    <button routerLink="/blog" routerLinkActive="active">
+      <i class="icon">ℹ️</i> <span>Blog</span>
+    </button>
+  </div>
+</aside>

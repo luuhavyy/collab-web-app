@@ -1,0 +1,66 @@
+<div class="product-container" *ngIf="!isAdding">
+  <h2>Quản lý sản phẩm</h2>
+
+  <div class="header-container">
+    <button class="add-button" (click)="showAddForm()">➕ Thêm sản phẩm</button>
+    <div class="search-bar">
+      <input 
+        type="text" 
+        [(ngModel)]="searchText" 
+        (input)="searchProducts()" 
+        placeholder="🔍 Tìm kiếm sản phẩm..."
+      >
+    </div>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Mã</th>
+        <th>Tên</th>
+        <th>Giá</th>
+        <th>Số lượng</th>
+        <th>Phân loại</th>
+        <th>Doanh số</th>
+        <th>Thao tác</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of paginatedProducts">
+        <td>#{{ product._id }}</td>
+        <td>{{ product.product_name }}</td>
+        <td>{{ product.price | currency:'VND' }}</td>
+        <td>{{ product.stock }}</td>
+        <td>{{ product.category }}</td>
+        <td>{{ product.total_sold }}</td>
+        <td>
+          <button (click)="editProduct(product)">✏️</button>
+          <button (click)="confirmDelete(product)">🗑️</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="pagination">
+    <button (click)="prevPage()" [disabled]="currentPage === 1">‹</button>
+    <span>Trang {{ currentPage }} / {{ totalPages }}</span>
+    <button (click)="nextPage()" [disabled]="currentPage >= totalPages">›</button>
+  </div>
+</div>
+
+<!-- Form thêm/sửa sản phẩm -->
+<app-product-add  
+   *ngIf="isAdding" 
+   [product]="selectedProduct" 
+   (save)="addProduct($event)" 
+   (close)="hideForm()">
+</app-product-add>
+
+<!-- Popup xác nhận xóa -->
+<div *ngIf="showConfirmDelete" class="popup">
+  <p>Bạn có chắc chắn muốn xóa sản phẩm "{{ selectedProduct.product_name }}" không?</p>
+  <div class="button-group">
+    <button (click)="deleteProduct()">✅ Xác nhận</button>
+    <button (click)="hideDeletePopup()">❌ Hủy</button>
+  </div>
+</div>

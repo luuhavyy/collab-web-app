@@ -1,0 +1,13 @@
+<header *ngIf="!isLoginPage()">
+  <app-admin-header></app-admin-header>
+</header>
+
+<div class="container" [ngClass]="{'full-screen': isLoginPage()}">
+  <aside *ngIf="!isLoginPage()">
+    <app-slide-bar></app-slide-bar>
+  </aside>
+
+  <main>
+    <router-outlet></router-outlet> 
+  </main>
+</div>
