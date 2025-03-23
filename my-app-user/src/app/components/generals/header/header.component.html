@@ -1,0 +1,49 @@
+<!-- Thanh thông báo khuyến mãi -->
+<div class="promo-banner">
+    <marquee behavior="scroll" direction="left">
+      <span class="icon">💸</span> ƯU ĐÃI ÁP DỤNG CHO TOÀN BỘ SẢN PHẨM CỦA COLLAB EYEWEAR — THỜI GIAN CÓ HẠN!
+      <a routerLink="/promotion">Mua Ngay →</a>
+    </marquee>
+  </div>
+  
+  <!-- Thanh navigation -->
+  <header class="navbar">
+    <div class="container">
+    <!-- Logo -->
+    <a routerLink="home">
+      <img src="assets/images/logocollab.png" alt="Collab Logo" class="logo" />
+    </a>
+  
+      <!-- Menu chính -->
+      <nav class="nav-links">
+        <a routerLink="home">Trang chủ</a>
+        <a routerLink="product">Sản phẩm</a>
+        <a routerLink="perfect-match">Perfect Match</a>
+        <a routerLink="promotion">Giảm giá</a>
+        <a routerLink="faq">FAQs</a>
+        <a routerLink="aboutus">Về COLLAB</a>
+        <a routerLink="blog">Blog</a>
+      </nav>
+  
+        <!-- Icons -->
+        <div class="nav-icons">
+            
+          <!-- Thanh tìm kiếm -->
+            <div class="search-container">
+              <input type="text" [(ngModel)]="searchQuery" (keydown.enter)="searchProduct()" placeholder="Tìm kiếm sản phẩm..." class="search-input" [class.active]="isSearchActive"/>
+              <img src="assets/images/search.png" alt="Tìm kiếm" class="search-icon" (click)="toggleSearch()"/>
+            </div>
+
+            <div class="account" (click)="goToAccount()">
+            <img src="assets/images/user.png" alt="Tài khoản" />
+            </div>
+            
+            <div class="cart" (click)="goToCart()">
+            <img src="assets/images/cart.png" alt="Giỏ hàng" />
+            <span class="cart-count">{{ total_item }}</span> 
+
+            </div>
+        </div>
+    </div>
+  </header>
+  

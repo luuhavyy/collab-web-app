@@ -1,0 +1,36 @@
+<div class="order-complete">
+    <h1>Hoàn tất!</h1>
+  
+    <!-- Tiến trình checkout -->
+    <div class="progress">
+      <div class="step">1. Giỏ hàng của bạn</div>
+      <div class="step">2. Thông tin thanh toán</div>
+      <div class="step active">3. Hoàn tất đơn hàng</div>
+    </div>
+  
+    <!-- Thông tin đơn hàng -->
+    <div class="order-summary">
+      <h3>Cảm ơn quý khách 🎉</h3>
+      <p>Hệ thống đã xác nhận đơn hàng của bạn</p>
+  
+      <!-- Danh sách sản phẩm -->
+      <div class="cart-items">
+        <div class="cart-item" *ngFor="let item of cartItems; let i = index">
+          <span class="badge">{{ item.quantity }}</span>
+          <img [src]="item.product_image" alt="{{ item.product_name }}">
+        </div>
+      </div>
+  
+      <!-- Thông tin chi tiết -->
+      <div class="order-details">
+        <p><strong>Mã đơn hàng:</strong> {{ order_id }}</p>
+        <p><strong>Ngày đặt hàng:</strong> {{ order_date }}</p>
+        <p><strong>Tổng cộng:</strong> {{ total_amount | currency:'VND' }}</p>
+        <p><strong>Phương thức thanh toán:</strong> {{ payment_method }}</p>
+      </div>
+  
+      <!-- Button điều hướng -->
+      <button class="history-btn" (click)="goToHistory()">Lịch sử mua hàng</button>
+    </div>
+  </div>
+  

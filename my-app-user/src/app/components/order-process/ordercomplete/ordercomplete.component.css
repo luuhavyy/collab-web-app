@@ -1,0 +1,106 @@
+.order-complete {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    padding: 30px;
+  }
+
+  h3 {
+    padding: 20px;
+    font-size: 25px;
+  }
+
+  p {
+    padding: 10px;
+  }
+
+  .progress {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+  }
+  
+  .step {
+    padding: 10px 20px;
+    border-bottom: 3px solid lightgray;
+    font-size: 16px;
+    color: gray;
+  }
+  
+  .step.active {
+    border-bottom: 3px solid #28a745;
+    color: black;
+    font-weight: bold;
+  } 
+  
+  .order-summary {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: auto;
+  }
+  
+  .cart-items {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .cart-item {
+    position: relative;
+  }
+  
+  .cart-item img {
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+  }
+  
+  .badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: black;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .order-details {
+    text-align: left;
+    margin-top: 15px;
+  }
+  
+  .highlight {
+    font-weight: bold;
+    color: black;
+  }
+  
+  .history-btn {
+    background: black;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    cursor: pointer;
+  }
+  
+  .history-btn:hover {
+    background: #333;
+  }
+  

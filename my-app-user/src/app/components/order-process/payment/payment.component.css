@@ -1,0 +1,224 @@
+.payment-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+h1 {
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  padding: 30px;
+}
+
+h2 {
+  padding-bottom: 30px;
+  padding: 20px;
+}
+
+h5 {
+  padding: 10px;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.inline {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 10px;
+}
+
+
+/* Tiến trình thanh toán */
+.progress {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+}
+
+.step {
+  padding: 10px 20px;
+  border-bottom: 3px solid lightgray;
+  font-size: 16px;
+  color: gray;
+}
+
+.step.active {
+  border-bottom: 3px solid #28a745;
+  color: black;
+  font-weight: bold;
+} 
+
+/* Cột trái */
+.payment-left {
+  width: 65%;
+}
+
+/* Cột phải */
+.payment-right {
+  width: 32%;
+}
+
+/* Box chung */
+.box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+
+/* Input và select */
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+input:disabled {
+  background: #f5f5f5;
+  cursor: not-allowed;
+}
+
+/* Checkbox */
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+  font-size: 16px;
+  padding: 5px 0;
+}
+
+.checkbox-container input {
+  width: auto;
+  margin-right: 10px;
+}
+
+/* Tổng đơn hàng */
+.order-summary {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.order-summary hr {
+  margin: 10px 0;
+  border: none;
+  border-top: 1px solid #ddd;
+}
+
+p {
+  padding: 10px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+/* Ô nhập mã giảm giá */
+.discount-section {
+  display: flex;
+  gap: 10px;
+  align-items: center; /* Căn giữa các phần tử */
+}
+
+.discount-section input {
+  flex: 2; /* Tăng độ dài ô nhập mã */
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #000;
+  border-radius: 6px;
+}
+
+.discount-section button {
+  flex: 1; /* Giảm chiều rộng nút */
+  padding: 10px 16px;
+  font-size: 14px; /* Nhỏ hơn để vừa nút */
+  font-weight: bold;
+  background: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+  white-space: nowrap; /* Tránh xuống dòng chữ */
+}
+
+.discount-section button:hover {
+  background: #333;
+}
+
+
+/* Mã giảm giá */
+.discount-amount {
+  color: green;
+  font-weight: bold;
+}
+
+/* Button thanh toán */
+button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: black ;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* Phương thức thanh toán */
+.payment-method label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  padding: 5px 0;
+}
+
+.payment-method input[type="radio"] {
+  width: auto;
+  margin: 0;
+}
+
+.payment-details {
+  margin-left: 25px;
+  padding: 10px;
+  background: #f8f8f8;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.payment-details input {
+  display: block;
+  width: 100%;
+  margin: 5px 0;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.qr-code {
+  width: 150px;
+  height: 150px;
+}

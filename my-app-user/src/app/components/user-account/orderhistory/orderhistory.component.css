@@ -1,0 +1,179 @@
+.order-container {
+  display: flex;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  }
+  .sidebar-container {
+    width: 250px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center; /* Căn giữa nội dung trong sidebar */
+    justify-content: center;
+    transform: translateY(-10%); /* Đẩy sidebar lên giữa theo chiều dọc */
+}
+  
+  .profile {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+  }
+  
+  .menu {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .menu li {
+    padding: 10px 0;
+  }
+  
+  .menu li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+  }
+  
+  .menu li.active a {
+    font-weight: bold;
+  }
+  
+  .menu .logout a {
+    color: red;
+  }
+
+.order-history {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 40px;
+    font-weight: bold;
+    padding: 20px;
+    padding-bottom: 20px;
+  }
+  
+  .order-list h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding-right: 400px;
+  }
+  
+  table {
+    width: 90%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  thead {
+    background: #f3f3f3;
+
+  }
+  
+  th, td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+  }
+  
+  .view-btn {
+    background: #063B06;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .view-btn:hover {
+    opacity: 0.8;
+  }
+  
+  /* Chi tiết đơn hàng */
+  .order-details-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .order-details {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 400px;
+  }
+  
+  .order-details .title {
+    padding-bottom: 10px;
+  }
+
+  .order-details .status {
+    padding-bottom: 10px;
+    text-align: center;
+  }
+
+  .cart-items {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .cart-item {
+    position: relative;
+  }
+  
+  .cart-item img {
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+  }
+
+  p {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: black;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .history-btn {
+    background: #063B06;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    cursor: pointer;
+  }
+  
+  .history-btn:hover {
+    opacity: 0.8;
+  }
+  

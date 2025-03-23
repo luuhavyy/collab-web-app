@@ -1,0 +1,67 @@
+<div class="order-container">
+    <!-- Sidebar điều hướng -->
+    <div class="sidebar-container">
+        <app-sidebar></app-sidebar>
+    </div>
+
+    <div class="order-history">
+        <h1>Tài khoản của tôi</h1>
+    
+        <div class="order-list">
+        <h2>Lịch sử đơn hàng</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>Mã đơn hàng</th>
+                <th>Ngày</th>
+                <th>Trạng Thái</th>
+                <th>Giá</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let order of orders">
+                <td>{{ order._id }}</td>
+                <td>{{ order.order_date }}</td>
+                <td>{{ order.order_status }}</td>
+                <td>{{ order.total_amount | currency:'VND' }}</td>
+                <td>
+                <button class="view-btn" (click)="viewOrderDetails(order)">Xem chi tiết</button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        </div>
+    </div>
+    
+    <!-- Trang chi tiết đơn hàng -->
+    <div class="order-details-modal" *ngIf="selectedOrder">
+        <div class="order-details">
+            <h2 class="title">Chi tiết đơn hàng</h2>
+            <p class="status">Đơn hàng đang <span class="highlight">{{ selectedOrder.order_status }}</span></p>
+
+            <!-- Danh sách sản phẩm -->
+            <div class="cart-items">
+                <div class="cart-item" *ngFor="let item of selectedOrder.items">
+                    <span class="badge">{{ item.quantity }}</span>
+                    <img [src]="item.image" alt="{{ item.name }}">
+                </div>
+            </div>
+
+            <!-- Chi tiết đơn hàng -->
+            <div class="order-info">
+                <p><strong>Mã đơn hàng: &nbsp;</strong> <span class="highlight">{{ selectedOrder._id }}</span></p>
+                <p><strong>Ngày: &nbsp;</strong> {{ selectedOrder.order_date }}</p>
+                <p><strong>Thành tiền: &nbsp;</strong> <span class="highlight">{{ selectedOrder.total_price | currency:'VND' }}</span></p>
+                <p><strong>Phương thức thanh toán: &nbsp;</strong> {{ selectedOrder.payment_method }}</p>
+                <p><strong>Tình trạng: &nbsp;</strong> {{ selectedOrder.order_status }}</p>
+                <p><strong>Địa chỉ giao hàng: &nbsp;</strong> {{ selectedOrder.delivery_address }}</p>
+            </div>
+
+            <!-- Nút quay lại -->
+            <button class="history-btn" (click)="closeOrderDetails()">Quay lại lịch sử đơn hàng</button>
+        </div>
+    </div>
+
+</div>
+  

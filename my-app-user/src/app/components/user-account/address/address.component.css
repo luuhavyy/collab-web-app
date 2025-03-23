@@ -1,0 +1,210 @@
+.account-container {
+    padding: 20px;
+}
+.content {
+    display: flex;
+    align-items: center; /* Giữ sidebar không bị thấp xuống */
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: auto;
+    min-height: 400px; /* Giữ cho sidebar luôn cao tối thiểu */
+}
+
+.sidebar-container {
+    width: 250px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center; /* Căn giữa nội dung trong sidebar */
+    justify-content: center;
+    transform: translateY(-12%); /* Đẩy sidebar lên giữa theo chiều dọc */
+}
+
+
+  h1 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    padding: 20px;
+    padding-bottom: 20px;
+  }
+
+/* === Nội dung địa chỉ === */
+.address-content {
+    flex-grow: 1;
+    padding-left: 40px;
+}
+
+h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-bottom: 10px;
+  }
+
+/* === Danh sách địa chỉ === */
+.address-list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.address-card {
+    width: 320px;
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+}
+
+.address-card h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+.address-card p {
+    font-size: 16px;
+    padding: 5px;
+}
+
+.address-card button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 14px;
+    color: #555;
+}
+
+.address-card button:hover {
+    color: black;
+}
+
+/* === Form chỉnh sửa === */
+.edit-form {
+    margin-top: 15px;
+}
+
+.edit-form input {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.edit-form button {
+    padding: 6px 12px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.edit-form button:first-of-type {
+    background: #063B06;
+    color: white;
+}
+
+.edit-form button:last-of-type {
+    background: #ccc;
+}
+
+/* Nút Thêm địa chỉ mới */
+.add-address-btn {
+    display: center;
+    margin: 20px auto;
+    padding: 10px 15px;
+    background: #063B06;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.add-address-btn:hover {
+    opacity: 0.8;
+}
+
+/* Form thêm địa chỉ */
+.add-form {
+    margin-top: 15px;
+    max-width: 320px;
+    margin: auto;
+}
+
+.add-form input {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.add-form button {
+    padding: 6px 12px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-form button:first-of-type {
+    background: #063B06;
+    color: white;
+}
+
+.add-form button:last-of-type {
+    background: #ccc;
+}
+
+/* Nút Xóa */
+.delete-btn {
+    margin-left: 8px;
+    padding: 5px 10px;
+    background: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.delete-btn:hover {
+    background: #c82333;
+}
+
+/* Popup xác nhận xóa */
+.delete-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.delete-popup button {
+    margin: 10px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-popup button:first-of-type {
+    background: #dc3545;
+    color: white;
+}
+
+.delete-popup button:last-of-type {
+    background: #ccc;
+}
+

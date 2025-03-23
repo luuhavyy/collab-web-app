@@ -1,0 +1,143 @@
+/* Footer */
+.footer {
+    background-color: #063B06; 
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Chứa nội dung chính của footer */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column; /* Để logo, liên hệ, icon social nằm dọc */
+    align-items: flex-start; /* Căn trái */
+}
+
+/* Logo và tagline */
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px; 
+}
+
+.separator {
+    width: 1px; 
+    height: 20px; 
+    background-color: rgba(255, 255, 255, 0.5); 
+    display: inline-block;
+}
+
+.logo {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.tagline {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* Thông tin liên hệ */
+.footer-contact {
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: left;
+    padding: 5px;
+    line-height: 1.5;
+}
+
+/* Menu footer */
+.footer-menu {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); 
+    gap: 20px;
+    text-align: left;
+}
+
+.footer-menu h4 {
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.footer-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-menu a:hover {
+    text-decoration: underline;
+}
+
+/* Các danh mục con */
+.footer-section {
+    text-align: left;
+}
+
+.footer-section h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 5px;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Đường kẻ ngang */
+.footer-divider {
+    border: 0.3px solid rgba(255, 255, 255, 0.3);
+    margin: 10px auto;
+    max-width: 90%;
+}
+
+/* Icon mạng xã hội - căn dưới phần liên hệ */
+.social-icons {
+    display: flex;
+    justify-content: flex-start; /* Căn trái theo phần liên hệ */
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px; /* Tạo khoảng cách giữa liên hệ và icon */
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1); 
+    transition: transform 0.2s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+/* Nội dung bản quyền - căn giữa */
+.footer-copyright {
+    text-align: center;
+    font-size: 14px;
+    opacity: 0.8;
+    margin-top: 10px;
+}

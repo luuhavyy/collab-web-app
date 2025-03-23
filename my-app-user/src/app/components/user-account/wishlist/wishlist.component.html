@@ -1,0 +1,46 @@
+<div class="wishlist-container">
+    <!-- Sidebar điều hướng -->  
+    <div class="sidebar-container">
+    <app-sidebar></app-sidebar>
+    </div>
+
+    <!-- Danh sách mục yêu thích -->
+    <div class="wishlist-content">
+        <h1>Tài khoản của tôi</h1>
+        <h2>Mục yêu thích của bạn</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Sản phẩm</th>
+                    <th>Giá</th>
+                    <th>Hành động</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of wishlist">
+                    <td><button class="remove-btn" (click)="openConfirmPopup(item)">✖</button></td>
+                    <td class="product-info">
+                        <img [src]="item.product_image" alt="{{ item.product_name }}">
+                        <div>
+                            <p class="product-name">{{ item.product_name }}</p>
+                            <p class="product-color">Color: {{ item.colour }}</p>
+                        </div>
+                    </td>
+                    <td>{{ convertPrice(item.price) | currency:'VND' }}</td>
+                    <td><button class="cart-btn" (click)="addToCart(item)">Thêm vào giỏ hàng</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Popup xác nhận xóa -->
+    <div *ngIf="showConfirmPopup" class="popup-overlay">
+        <div class="popup">
+            <p>Bạn có chắc chắn muốn xóa sản phẩm này không?</p>
+            <button class="confirm-btn" (click)="confirmRemove()">Xác nhận</button>
+            <button class="cancel-btn" (click)="cancelRemove()">Hủy</button>
+        </div>
+    </div>
+
+</div>

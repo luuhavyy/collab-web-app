@@ -1,0 +1,54 @@
+.sidebar {
+    width: 250px;
+    height: 350px;
+    background: #f3f3f3;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 100px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  
+  .avatar-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 6px rgba(0,0,0,0.2);
+  }
+  
+  .menu {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .menu li {
+    padding: 10px 0;
+  }
+  
+  .menu li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    cursor: pointer; /* 🔥 Thêm con trỏ chuột */
+  }
+  
+  .menu li a:hover {
+    color: #063B06; /* Hiệu ứng hover */
+  }
+  
+  .menu li.active a {
+    font-weight: bold;
+  }
+  
+  .menu .logout a {
+    color: red;
+    font-weight: bold;
+    cursor: pointer; /* Thêm con trỏ chuột */
+  }
+  

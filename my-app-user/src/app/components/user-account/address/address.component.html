@@ -1,0 +1,61 @@
+<div class="account-container">
+  
+  <div class="content">
+    <!-- Sidebar điều hướng -->  
+    <div class="sidebar-container">
+      <app-sidebar></app-sidebar>
+  </div>
+
+      <!-- Nội dung chính -->
+      <div class="address-content">
+        <h1>Tài khoản của tôi</h1>
+        <h2>Địa chỉ</h2>
+  
+        <!-- Danh sách địa chỉ -->
+        <div class="address-list">
+          <div class="address-card" *ngFor="let address of addresses; let i = index">
+            <h3>Địa chỉ {{ i + 1 }} 
+              <button (click)="editAddress(i)">✏ Chỉnh sửa</button>
+              <button class="delete-btn" (click)="confirmDelete(i)">🗑 Xóa</button></h3>
+            <p>{{ address.first_name }}</p>
+            <p>{{ address.last_name }}</p>
+            <p>{{ address.phone_number }}</p>
+            <p>{{ address.address }}</p>
+  
+            <!-- Form chỉnh sửa địa chỉ -->
+            <div *ngIf="editIndex === i" class="edit-form">
+              <input type="text" [(ngModel)]="editedAddress.first_name" placeholder="Tên">
+              <input type="text" [(ngModel)]="editedAddress.last_name" placeholder="Họ">
+              <input type="text" [(ngModel)]="editedAddress.phone_number" placeholder="Số điện thoại">
+              <input type="text" [(ngModel)]="editedAddress.address" placeholder="Địa chỉ">
+              <button (click)="saveAddress()">Lưu</button>
+              <button (click)="cancelEdit()">Hủy</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Nút thêm địa chỉ mới -->
+        <button class="add-address-btn" (click)="toggleAddAddress()">+ Thêm địa chỉ mới</button>
+
+        <!-- Form thêm địa chỉ mới -->
+        <div *ngIf="showAddForm" class="add-form">
+          <input type="text" [(ngModel)]="newAddress.first_name" placeholder="Tên">
+          <input type="text" [(ngModel)]="newAddress.last_name" placeholder="Họ">
+          <input type="text" [(ngModel)]="newAddress.phone_number" placeholder="Số điện thoại">
+          <input type="text" [(ngModel)]="newAddress.address" placeholder="Địa chỉ">
+            <button (click)="addNewAddress()">Lưu</button>
+            <button (click)="toggleAddAddress()">Hủy</button>
+        </div>
+
+      </div>
+    </div>
+
+      <!-- Popup xác nhận xóa -->
+    <div *ngIf="deleteIndex !== null" class="delete-popup">
+      <p>Bạn có chắc chắn muốn xóa địa chỉ này không?</p>
+      <button (click)="deleteAddress()">Xác nhận</button>
+      <button (click)="cancelDelete()">Hủy</button>
+    </div>
+
+</div>
+  

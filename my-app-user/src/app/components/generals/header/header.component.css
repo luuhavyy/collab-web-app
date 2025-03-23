@@ -1,0 +1,135 @@
+/* Thanh thông báo khuyến mãi */
+.promo-banner {
+    background-color: #063B06; 
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
+
+.promo-banner .marquee {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee-scroll 10s linear infinite;
+}
+
+.promo-banner a {
+    color: #ffdd57;
+    font-weight: bold;
+    margin-left: 5px;
+    text-decoration: none;
+}
+
+.promo-banner a:hover {
+    text-decoration: underline;
+}
+
+/* Header chính */
+.navbar {
+    background-color: white;
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Giới hạn kích thước logo */
+.logo img {
+    width: 120px; /* Hoặc thay đổi theo kích thước mong muốn */
+    height: auto; /* Giữ tỉ lệ */
+}
+
+/* Menu chính */
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Kích thước icon trong header */
+.nav-icons {
+    display: flex;
+    gap: 15px;
+    font-size: 18px;
+}
+
+/* Fix icon quá to */
+.nav-icons img {
+    width: 24px; /* Đặt kích thước mong muốn */
+    height: 24px;
+    object-fit: contain; /* Đảm bảo không bị méo */
+}
+
+/* Giỏ hàng */
+.nav-icons .cart {
+    position: relative;
+}
+
+/* Chỉ số giỏ hàng */
+.nav-icons .cart .cart-count {
+    position: absolute;
+    top: -5px;
+    right: -8px;
+    background: black;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+/* Container của thanh tìm kiếm */
+.search-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* Ô nhập liệu tìm kiếm */
+.search-input {
+    width: 0;
+    opacity: 0;
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+/* Khi ô tìm kiếm mở rộng */
+.search-input.active {
+    width: 200px;
+    opacity: 1;
+    padding: 5px 10px;
+}
+
+/* Icon kính lúp */
+.search-icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    margin-left: 10px;
+}

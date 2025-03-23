@@ -1,0 +1,27 @@
+<div class="sidebar">
+    <div class="profile">
+      <img [src]="safeAvatarUrl" alt="User Avatar" class="avatar-img" />
+      <h3 *ngIf="customer.first_name && customer.last_name">
+        {{ customer.first_name }} {{ customer.last_name }}
+      </h3>
+      <hr />
+    </div>
+    <ul class="menu">
+      <li [class.active]="isActive('/account')">
+        <a routerLink="/account">Tài khoản</a>
+      </li>
+      <li [class.active]="isActive('/address')">
+        <a routerLink="/address">Địa chỉ</a>
+      </li>
+      <li [class.active]="isActive('/orderhistory')">
+        <a routerLink="/orderhistory">Đơn hàng</a>
+      </li>
+      <li [class.active]="isActive('/wishlist')">
+        <a routerLink="/wishlist">Mục yêu thích</a>
+      </li>
+      <li class="logout">
+        <a (click)="logout()">Đăng xuất</a>
+      </li>
+    </ul>
+  </div>
+  

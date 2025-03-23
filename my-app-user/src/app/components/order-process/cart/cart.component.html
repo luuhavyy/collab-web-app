@@ -1,0 +1,76 @@
+<div class="cart-container">
+  <h1>Giỏ hàng</h1>
+
+  <!-- Bước tiến trình -->
+  <div class="progress">
+    <div class="step active">1 Giỏ hàng của bạn</div>
+    <div class="step">2 Thông tin thanh toán</div>
+    <div class="step">3 Hoàn tất đơn hàng</div>
+  </div>
+
+  <div class="cart-content">
+    <!-- Bảng sản phẩm -->
+    <div class="cart-items">
+      <table>
+        <thead>
+          <tr>
+            <th>Sản phẩm</th>
+            <th>Số lượng</th>
+            <th>Giá</th>
+            <th>Tổng</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of cartItems">
+            <td class="product-info">
+              <img [src]="item.product_image" alt="{{ item.product_name }}" />
+              <div>
+                <p class="item-name">{{ item.product_name }}</p>
+                <p class="item-color">Màu: {{ item.colour }}</p>
+              </div>
+            </td>
+            <td>
+              <div class="quantity">
+                <button (click)="decreaseQuantity(item)">-</button>
+                <input type="text" [(ngModel)]="item.quantity" readonly />
+                <button (click)="increaseQuantity(item)">+</button>
+              </div>
+            </td>
+            <td class="price">VND {{ item.item_price | number }}</td>
+            <td class="total-price">VND {{ item.item_price * item.quantity | number }}</td>
+            <td><button class="remove-btn" (click)="selectItemToRemove(item)">✖</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Popup xác nhận xóa sản phẩm -->
+    <div class="popup" *ngIf="selectedItem">
+      <div class="popup-content">
+        <p>Bạn có chắc chắn muốn xóa sản phẩm này?</p>
+        <button (click)="removeFromWishlist()" class="confirm-btn">Xác nhận</button>
+        <button (click)="cancelDelete()" class="cancel-btn">Hủy</button>
+      </div>
+    </div>
+
+    <!-- Bảng tổng tiền -->
+    <div class="summary">
+      <h2>Tổng tiền</h2>
+      
+      
+      <label><input type="radio" name="shipping" value="free" [(ngModel)]="selectedShipping" (change)="updateShipping('free')" /> &nbsp;&nbsp;&nbsp; Miễn phí ship (VND 0)</label>
+      
+      <p>Tiền hàng: <span>VND {{ totalAmount | number }}</span></p>
+
+      <hr>
+
+      <h3>Tổng cộng: <span>VND {{ totalCost | number }}</span></h3>
+      
+      <button class="checkout" (click)="goToPayment()">Thanh toán</button>
+    </div>
+  </div>
+
+
+</div>

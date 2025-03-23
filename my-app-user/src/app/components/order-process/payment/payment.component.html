@@ -1,0 +1,144 @@
+<!-- Thanh tiến trình -->
+
+<h1>Thanh toán</h1>
+
+<div class="progress">
+    <div class="step" (click)="goBackToCart()">1. Giỏ hàng của bạn</div>
+    <div class="step active">2. Thông tin thanh toán</div>
+    <div class="step">3. Hoàn tất đơn hàng</div>
+</div>
+
+<div class="payment-container">
+    
+    <!-- Cột trái -->
+    <div class="payment-left">
+      <div class="box">
+        <h2>Thông tin liên hệ</h2>
+        <div class="inline">
+          <h5>HỌ</h5>
+          <input type="text" placeholder="Nhập Họ" [(ngModel)]="customer.last_name">
+          <h5>TÊN</h5>
+          <input type="text" placeholder="Nhập Tên" [(ngModel)]="customer.first_name">
+        </div>
+        <h5>SỐ ĐIỆN THOẠI</h5>
+        <input type="text" placeholder="Nhập số điện thoại" [(ngModel)]="customer.phone_number">
+        <h5>ĐỊA CHỈ EMAIL</h5>
+        <input type="email" placeholder="Nhập địa chỉ Email" [(ngModel)]="customer.email">
+      </div>
+  
+      <div class="box">
+        <h2>Địa chỉ nhận hàng</h2>
+        <h5>HỌ</h5>
+        <input
+          type="text"
+          placeholder="Nhập Họ"
+          [(ngModel)]="customer.address_array[0].first_name"
+          [disabled]="!useAnotherAddress && isLoggedIn"
+        />
+        <h5>TÊN</h5>
+        <input
+          type="text"
+          placeholder="Nhập Tên"
+          [(ngModel)]="customer.address_array[0].last_name"
+          [disabled]="!useAnotherAddress && isLoggedIn"
+        />
+        <h5>SỐ ĐIỆN THOẠI</h5>
+        <input
+          type="text"
+          placeholder="Nhập số điện thoại"
+          [(ngModel)]="customer.address_array[0].phone_number"
+          [disabled]="!useAnotherAddress && isLoggedIn"
+        />
+        <h5>ĐỊA CHỈ</h5>
+        <input
+          type="text"
+          placeholder="Nhập địa chỉ"
+          [(ngModel)]="customer.address_array[0].address"
+          [disabled]="!useAnotherAddress && isLoggedIn"
+        />
+      
+        <!-- Show checkbox only for logged-in users -->
+        <div class="checkbox-container" *ngIf="isLoggedIn">
+          <input
+            type="checkbox"
+            [(ngModel)]="useAnotherAddress"
+            (change)="toggleAddress()"
+          />
+          <label>Dùng một địa chỉ thứ 2 (tùy chọn)</label>
+        </div>
+      </div>
+      
+  
+      <div class="box payment-method">
+        <h2>Phương thức thanh toán</h2>
+        
+        <label>
+            <input type="radio" name="payment" value="QRCODE" [(ngModel)]="paymentMethod" (change)="updatePaymentMethod()"> 
+            Thanh toán QR Code
+        </label>
+        
+        <div *ngIf="paymentMethod === 'QRCODE'" class="payment-details">
+            <img src="assets/images/QR-Code.png" alt="QR Code" class="qr-code">
+            <p><strong>Ngân hàng:</strong> Vietcombank</p>
+            <p><strong>STK:</strong> 0051963798513</p>
+            <p><strong>Chủ tài khoản:</strong> COLLAB EYEWEAR</p>
+        </div>
+    
+        <label>
+            <input type="radio" name="payment" value="VISA" [(ngModel)]="paymentMethod" (change)="updatePaymentMethod()"> 
+            Thanh toán Visa
+        </label>
+    
+        <div *ngIf="paymentMethod === 'VISA'" class="payment-details">
+            <input type="text" placeholder="Số thẻ" [(ngModel)]="visaCard.number">
+            <input type="text" placeholder="Ngày hết hạn (MM/YY)" [(ngModel)]="visaCard.expiry">
+            <input type="text" placeholder="CVV" [(ngModel)]="visaCard.cvv">
+        </div>
+    
+        <label>
+            <input type="radio" name="payment" value="COD" [(ngModel)]="paymentMethod" (change)="updatePaymentMethod()"> 
+            Thanh toán khi nhận hàng (COD)
+        </label>
+    </div>
+    
+    <p *ngIf="!isFormValid()" class="error-message">Vui lòng điền đầy đủ thông tin</p>
+    <button (click)="goToOrderComplete()" [disabled]="!isFormValid()">Tiến hành thanh toán</button>
+  </div>
+  
+  <!-- Tổng đơn hàng -->
+  <div class="payment-right">
+    <div class="order-summary">
+      <h2>Tổng đơn hàng</h2>
+
+      <!-- Danh sách sản phẩm -->
+      <div *ngFor="let item of cartItems">
+        <p><b>{{ item.product_name }}</b> - {{ item.colour }} (x{{ item.quantity }})</p>
+        <p><b>{{ (item.item_price * item.quantity) | number }} VND</b></p>
+      </div>
+
+      <hr>
+
+      <!-- Ô nhập mã khuyến mãi -->
+      <div class="discount-section">
+        <input type="text" [(ngModel)]="discountCode" placeholder="Nhập mã giảm giá">
+        <button (click)="applyDiscount()">Áp dụng</button>
+      </div>
+
+      <!-- Hiển thị mã giảm giá đã áp dụng -->
+      <p *ngIf="discountCodeApplied">
+        <b>{{ discountCodeApplied }}</b> 
+        <span class="discount-amount">(-{{ discountAmount | number }} VND)</span> 
+        <a href="#" (click)="removeDiscount()">[Xoá]</a>
+      </p>
+
+      <p>Mã giảm giá: <b>{{ discountCodeApplied || 'Không có' }}</b></p>
+      <p>Phí vận chuyển: <b>{{ selectedShipping }}</b></p>
+      <p>Tổng tiền hàng: <b>{{ totalAmount | number }} VND</b></p>
+
+      <hr>
+      
+      <h3>Tổng cộng: <b>{{ totalCost | number }} VND</b></h3>
+    </div>
+  </div> 
+  
+</div>

@@ -1,0 +1,57 @@
+<div class="login-container">
+    <!-- Bên trái -->
+    <div class="login-left">
+        <img src="assets/images/logo.png" alt="Collab Glasses" class="login-banner">
+    </div>
+
+    <!-- Bên phải -->
+    <div class="login-right">
+        <h2>Đăng nhập</h2>
+        <h5>Bạn chưa có account? <a routerLink="/register">Đăng kí</a></h5>
+
+        <form [formGroup]="loginForm" (ngSubmit)="login()">
+            <!-- Email hoặc Tên đăng nhập -->
+            <label>Nhập tên hoặc địa chỉ</label>
+            <input type="text" formControlName="email" placeholder="Nhập tên hoặc địa chỉ email">
+            <div *ngIf="loginForm.controls['email'].invalid && loginForm.controls['email'].touched">
+                <p>Vui lòng nhập tên hoặc email hợp lệ</p>
+            </div>
+
+            <!-- Mật khẩu -->
+            <label>Mật khẩu</label>
+            <div class="password-container">
+                <input [type]="showPassword ? 'text' : 'password'" formControlName="password" placeholder="Nhập mật khẩu" class="password-input">
+                <button type="button" class="toggle-password" (click)="togglePasswordVisibility()">
+                    
+                </button>
+            </div>
+            <div *ngIf="loginForm.controls['password'].invalid && loginForm.controls['password'].touched">
+                <p>Mật khẩu không hợp lệ</p>
+            </div>
+
+            <!-- Lưu tài khoản & Quên mật khẩu -->
+            <div class="checkbox-group">
+                <input type="checkbox" formControlName="rememberMe">
+                <span>Lưu tài khoản</span>
+                <a routerLink="/forgotpassword" class="forgotpassword">Quên mật khẩu?</a>
+            </div>
+
+            <!-- Nút đăng nhập -->
+            <button type="submit" [disabled]="loginForm.invalid || isSubmitting">Đăng nhập</button>
+        </form>
+
+        <!-- Đăng nhập nhanh -->
+        <h4>Hoặc đăng nhập với</h4>
+        <div class="social-buttons">
+            <a class="facebook" href="https://www.facebook.com/v12.0/dialog/oauth?client_id=YOUR_FACEBOOK_APP_ID&redirect_uri=YOUR_REDIRECT_URI&scope=email" target="_blank">Facebook</a>
+        
+            <a class="google" href="https://accounts.google.com/o/oauth2/auth?client_id=YOUR_GOOGLE_CLIENT_ID&redirect_uri=YOUR_REDIRECT_URI&response_type=code&scope=email profile" target="_blank">Google</a>
+        
+            <a class="apple" href="https://appleid.apple.com/auth/authorize?client_id=YOUR_APPLE_CLIENT_ID&redirect_uri=YOUR_REDIRECT_URI&response_type=code&scope=email" target="_blank">Apple</a>
+        </div>
+
+        <!-- Hiển thị lỗi nếu có -->
+        <p class="error-message" *ngIf="errorMessage">{{ errorMessage }}</p>
+    </div>
+</div>
+
