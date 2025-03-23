@@ -1,0 +1,140 @@
+[{
+  "_id": {
+    "$oid": "67d834e959aa8845924b1cf4"
+  },
+  "customer_id": {
+    "$oid": "67c3baedd95005141f869311"
+  },
+  "wishlist_items": [
+    {
+      "product_id": {
+        "$oid": "67c518f07a1f248a2cf7db86"
+      }
+    },
+    {
+      "product_id": {
+        "$oid": "67c5199d7a1f248a2cf7db90"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "67d8355c59aa8845924b1cfb"
+  },
+  "customer_id": {
+    "$oid": "67c5e27dfc3a04ed294342e1"
+  },
+  "wishlist_items": [
+    {
+      "product_id": {
+        "$oid": "67c518f07a1f248a2cf7db86"
+      }
+    },
+    {
+      "product_id": {
+        "$oid": "67c51f617a1f248a2cf7dbb7"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "67d835e159aa8845924b1d04"
+  },
+  "customer_id": {
+    "$oid": "67c6bf524469254badc2a878"
+  },
+  "wishlist_items": [
+    {
+      "product_id": {
+        "$oid": "67c518f07a1f248a2cf7db86"
+      }
+    },
+    {
+      "product_id": {
+        "$oid": "67c5199d7a1f248a2cf7db90"
+      }
+    },
+    {
+      "product_id": {
+        "$oid": "67c51f617a1f248a2cf7dbb7"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "67db0d8eec63403def3c1b9b"
+  },
+  "customer_id": {
+    "$oid": "67db0d8e4cb11c3a73b233f1"
+  },
+  "wishlist_items": [
+    {
+      "product_id": {
+        "$oid": "67c5199d7a1f248a2cf7db90"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "67db0f27ec63403def3c1c9e"
+  },
+  "customer_id": {
+    "$oid": "67db0f279f06c71c44dfdd70"
+  },
+  "wishlist_items": [
+    {
+      "product_id": {
+        "$oid": "67c5199d7a1f248a2cf7db90"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "67db0ff5ec63403def3c1d22"
+  },
+  "customer_id": {
+    "$oid": "67db0ff59f06c71c44dfdd71"
+  },
+  "wishlist_items": [
+    {
+      "product_id": {
+        "$oid": "67c51e147a1f248a2cf7dbae"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "67db105bec63403def3c1d63"
+  },
+  "customer_id": {
+    "$oid": "67db105b9f06c71c44dfdd72"
+  },
+  "wishlist_items": [
+    {
+      "product_id": {
+        "$oid": "67c51e147a1f248a2cf7dbae"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "67db12ffec63403def3c1f0c"
+  },
+  "customer_id": {
+    "$oid": "67db12ffa618d27bbe70dab9"
+  },
+  "wishlist_items": [
+    {
+      "product_id": {
+        "$oid": "67c5199d7a1f248a2cf7db90"
+      }
+    }
+  ]
+}]

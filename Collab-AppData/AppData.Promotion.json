@@ -1,0 +1,166 @@
+[{
+  "_id": {
+    "$oid": "67c3c6f8d95005141f869333"
+  },
+  "promotion_code": "ADJF",
+  "promotion_status": "Hết hạn",
+  "start_date": {
+    "$date": "2024-08-05T17:00:00.000Z"
+  },
+  "end_date": {
+    "$date": "2026-05-07T17:00:00.000Z"
+  },
+  "min_order_value": {
+    "$numberDecimal": "50.000"
+  },
+  "discount_percent": {
+    "$numberDecimal": "0.1"
+  },
+  "promotion_title": "Ưu đãi đặc biệt"
+},
+{
+  "_id": {
+    "$oid": "67c5e3d5fc3a04ed29434302"
+  },
+  "promotion_code": "ADDD",
+  "promotion_status": "Còn hạn",
+  "start_date": {
+    "$date": "2024-08-05T17:00:00.000Z"
+  },
+  "end_date": {
+    "$date": "2026-05-07T17:00:00.000Z"
+  },
+  "min_order_value": {
+    "$numberDecimal": "50.000"
+  },
+  "discount_percent": {
+    "$numberDecimal": "0.05"
+  },
+  "promotion_title": "Ưu đãi hấp dẫn"
+},
+{
+  "_id": {
+    "$oid": "67d982edf56b361298d0f5a1"
+  },
+  "promotion_code": "FREESHIP",
+  "promotion_status": "Còn hạn",
+  "start_date": "2024-05-10T00:00:00.000+00:00",
+  "end_date": "2026-05-10T00:00:00.000+00:00",
+  "min_order_value": {
+    "$numberDecimal": "150.000"
+  },
+  "discount_percent": {
+    "$numberDecimal": "0.1"
+  },
+  "promotion_title": "Giảm giá 10% "
+},
+{
+  "_id": {
+    "$oid": "67d982fdf56b361298d0f5a2"
+  },
+  "promotion_code": "DISCOUNT10",
+  "promotion_status": "Còn hạn",
+  "start_date": "2024-05-15T00:00:00.000+00:00",
+  "end_date": "2026-05-15T00:00:00.000+00:00",
+  "min_order_value": {
+    "$numberDecimal": "200.000"
+  },
+  "discount_percent": {
+    "$numberDecimal": "0.1"
+  },
+  "promotion_title": "Mã giảm 10%"
+},
+{
+  "_id": {
+    "$oid": "67d9830ef56b361298d0f5a3"
+  },
+  "promotion_code": "VOUCHER50",
+  "promotion_status": "Còn hạn",
+  "start_date": "2024-06-01T00:00:00.000+00:00",
+  "end_date": "2026-06-01T00:00:00.000+00:00",
+  "min_order_value": {
+    "$numberDecimal": "100.000"
+  },
+  "discount_percent": {
+    "$numberDecimal": "0.05"
+  },
+  "promotion_title": "Giảm giá 5%"
+},
+{
+  "_id": {
+    "$oid": "67d98322f56b361298d0f5a4"
+  },
+  "promotion_code": "BOGO",
+  "promotion_status": "Còn hạn",
+  "start_date": {
+    "$date": "2024-06-10T00:00:00.000Z"
+  },
+  "end_date": {
+    "$date": "2026-06-10T00:00:00.000Z"
+  },
+  "min_order_value": 2,
+  "promotion_title": "Ưu đãi tiết kiệm",
+  "discount_percent": 50,
+  "updated_at": {
+    "$date": "2025-03-22T19:43:34.280Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67de7986121de318621de9a0"
+  },
+  "promotion_code": "collab",
+  "promotion_status": "Còn hạn",
+  "start_date": {
+    "$date": "2025-03-10T00:00:00.000Z"
+  },
+  "end_date": {
+    "$date": "2025-03-23T00:00:00.000Z"
+  },
+  "min_order_value": 500,
+  "discount_percent": 0.065,
+  "promotion_title": "collab",
+  "created_at": "2025-03-22T08:49:10.056Z",
+  "updated_at": {
+    "$date": "2025-03-23T01:33:52.825Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67df7084682b902a8d4413d6"
+  },
+  "promotion_code": "collab",
+  "promotion_status": "Còn hạn",
+  "start_date": {
+    "$date": "2025-03-14T00:00:00.000Z"
+  },
+  "end_date": {
+    "$date": "2025-03-24T00:00:00.000Z"
+  },
+  "min_order_value": 10,
+  "discount_percent": 0.05,
+  "promotion_title": "collab",
+  "created_at": "2025-03-23T02:23:00.237Z",
+  "updated_at": {
+    "$date": "2025-03-23T02:23:59.957Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67df7bb6682b902a8d4413dd"
+  },
+  "promotion_code": "c",
+  "promotion_status": "Hết hạn",
+  "start_date": {
+    "$date": "2025-03-07T00:00:00.000Z"
+  },
+  "end_date": {
+    "$date": "2025-03-20T00:00:00.000Z"
+  },
+  "min_order_value": 0,
+  "discount_percent": 0.3,
+  "promotion_title": "c",
+  "created_at": {
+    "$date": "2025-03-23T03:10:46.508Z"
+  }
+}]

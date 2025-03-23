@@ -1,0 +1,72 @@
+[{
+  "_id": {
+    "$oid": "67c54c2a7a1f248a2cf7dc33"
+  },
+  "customer_id": {
+    "$oid": "67c3baedd95005141f869311"
+  },
+  "product_id": {
+    "$oid": "67c521417a1f248a2cf7dbbf"
+  },
+  "rating": 4,
+  "comment": "mắt kính đẹp",
+  "created_at": {
+    "$date": "2024-11-11T17:00:00.000Z"
+  },
+  "updated_at": {
+    "$date": "2025-11-11T17:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c6bfd84469254badc2a88d"
+  },
+  "customer_id": {
+    "$oid": "67c6bf524469254badc2a878"
+  },
+  "product_id": {
+    "$oid": "67c5233a7a1f248a2cf7dbcd"
+  },
+  "rating": 4,
+  "comment": "nice glasses",
+  "created_at": {
+    "$date": "2024-11-11T17:00:00.000Z"
+  },
+  "updated_at": {
+    "$date": "2025-11-11T17:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c6c0204469254badc2a892"
+  },
+  "customer_id": {
+    "$oid": "67c5e27dfc3a04ed294342e1"
+  },
+  "product_id": {
+    "$oid": "67c526ab7a1f248a2cf7dbde"
+  },
+  "rating": 5,
+  "comment": "Kính oke phết",
+  "created_at": {
+    "$date": "2024-11-11T17:00:00.000Z"
+  },
+  "updated_at": {
+    "$date": "2025-11-11T17:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67d5a960dbdeac1e9e8c90c2"
+  },
+  "customer_id": {
+    "$oid": "67c3baedd95005141f869311"
+  },
+  "product_id": {
+    "$oid": "67c521417a1f248a2cf7dbbf"
+  },
+  "rating": 5,
+  "comment": "mắt kính đẹp xuất sắc tung nóc",
+  "created_at": "2024-11-11T17:00:00.000Z",
+  "updated_at": "2025-11-11T17:00:00.000Z"
+}]

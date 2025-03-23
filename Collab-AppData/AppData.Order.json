@@ -1,0 +1,213 @@
+[{
+  "_id": {
+    "$oid": "67c3be3dd95005141f869320"
+  },
+  "order_date": {
+    "$date": "2025-04-04T17:00:00.000Z"
+  },
+  "total_price": {
+    "$numberDecimal": "100000"
+  },
+  "total_discount": {
+    "$numberDecimal": "0"
+  },
+  "total_amount": {
+    "$numberDecimal": "100000"
+  },
+  "order_status": "Đã giao",
+  "delivery_address": "Quận Tân Phú ,Lê Trọng Tấn 124",
+  "customer_id": {
+    "$oid": "67c3baedd95005141f869311"
+  },
+  "items": [
+    {
+      "product_id": {
+        "$oid": "67c518f07a1f248a2cf7db86"
+      },
+      "quantity": 1,
+      "item_price": {
+        "$numberDecimal": "100000"
+      }
+    }
+  ],
+  "payment_method": "COD"
+},
+{
+  "_id": {
+    "$oid": "67c6bf834469254badc2a87f"
+  },
+  "order_date": {
+    "$date": "2025-02-04T17:00:00.000Z"
+  },
+  "total_price": {
+    "$numberDecimal": "900000"
+  },
+  "total_discount": {
+    "$numberDecimal": "50000"
+  },
+  "total_amount": {
+    "$numberDecimal": "850000"
+  },
+  "order_status": "Đã giao",
+  "delivery_address": "123 Hai Ba Trung Q1",
+  "customer_id": {
+    "$oid": "67c6bf524469254badc2a878"
+  },
+  "items": [
+    {
+      "product_id": {
+        "$oid": "67c518f07a1f248a2cf7db86"
+      },
+      "quantity": 1,
+      "item_price": {
+        "$numberDecimal": "100000"
+      }
+    },
+    {
+      "product_id": {
+        "$oid": "67c5199d7a1f248a2cf7db90"
+      },
+      "quantity": 2,
+      "item_price": {
+        "$numberDecimal": "800000"
+      }
+    }
+  ],
+  "payment_method": "COD"
+},
+{
+  "_id": {
+    "$oid": "67cae75e98b278f3cdd279ed"
+  },
+  "order_date": {
+    "$date": "2025-04-09T17:00:00.000Z"
+  },
+  "total_price": {
+    "$numberDecimal": "700000"
+  },
+  "total_discount": {
+    "$numberDecimal": "50000"
+  },
+  "total_amount": {
+    "$numberDecimal": "650000"
+  },
+  "order_status": "Đã giao",
+  "delivery_address": "Thảo Điền Q2",
+  "customer_id": {
+    "$oid": "67c6bf524469254badc2a878"
+  },
+  "items": [
+    {
+      "item_price": {
+        "$numberDecimal": "700000"
+      },
+      "quantity": 2,
+      "product_id": {
+        "$oid": "67c526ab7a1f248a2cf7dbde"
+      }
+    }
+  ],
+  "payment_method": "QRCODE"
+},
+{
+  "_id": {
+    "$oid": "67cbbde598b278f3cdd27a54"
+  },
+  "order_date": {
+    "$date": "2025-04-09T17:00:00.000Z"
+  },
+  "total_price": {
+    "$numberDecimal": "800000"
+  },
+  "total_discount": {
+    "$numberDecimal": "50000"
+  },
+  "total_amount": {
+    "$numberDecimal": "750000"
+  },
+  "order_status": "Đã giao",
+  "delivery_address": "123 lê trọng Tấn ,Tân Phú",
+  "customer_id": {
+    "$oid": "67c5e27dfc3a04ed294342e1"
+  },
+  "items": [
+    {
+      "product_id": {
+        "$oid": "67c5199d7a1f248a2cf7db90"
+      },
+      "quantity": 2,
+      "item_price": {
+        "$numberDecimal": "800000"
+      }
+    }
+  ],
+  "payment_method": "VISA"
+},
+{
+  "_id": {
+    "$oid": "67ce82472df61967073c8eeb"
+  },
+  "order_date": {
+    "$date": "2025-04-09T17:00:00.000Z"
+  },
+  "total_price": {
+    "$numberDecimal": "1600000"
+  },
+  "total_discount": {
+    "$numberDecimal": "100000"
+  },
+  "total_amount": {
+    "$numberDecimal": "1500000"
+  },
+  "order_status": "Đã giao",
+  "delivery_address": "456 lê trọng Tấn ,Tân Phú",
+  "customer_id": {
+    "$oid": "67ce84822df61967073c8ef3"
+  },
+  "items": [
+    {
+      "product_id": {
+        "$oid": "67c51e147a1f248a2cf7dbae"
+      },
+      "quantity": 4,
+      "item_price": {
+        "$numberDecimal": "1600000"
+      }
+    }
+  ],
+  "payment_method": "COD"
+},
+{
+  "_id": {
+    "$oid": "67ce8c842df61967073c8f03"
+  },
+  "order_date": {
+    "$date": "2025-04-09T17:00:00.000Z"
+  },
+  "total_price": {
+    "$numberDecimal": "4000000"
+  },
+  "total_discount": {
+    "$numberDecimal": "200000"
+  },
+  "total_amount": {
+    "$numberDecimal": "3800000"
+  },
+  "order_status": "Chờ xác nhận",
+  "delivery_address": "678 lê trọng Tấn ,Tân Phú",
+  "customer_id": {
+    "$oid": "67ce8d532df61967073c8f12"
+  },
+  "items": [
+    {
+      "product_id": {
+        "$oid": "67c51f617a1f248a2cf7dbb7"
+      },
+      "quantity": 10,
+      "item_price": {
+        "$numberDecimal": "4000000"
+      }
+    }
+  ],
+  "payment_method": "COD"
+}]

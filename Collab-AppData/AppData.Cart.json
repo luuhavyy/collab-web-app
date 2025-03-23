@@ -1,0 +1,85 @@
+[{
+  "_id": {
+    "$oid": "67d8333359aa8845924b1cde"
+  },
+  "customer_id": {
+    "$oid": "67c3baedd95005141f869311"
+  },
+  "total_items": 2,
+  "total_price": 500000,
+  "cart_items": [
+    {
+      "product_id": {
+        "$oid": "67c518f07a1f248a2cf7db86"
+      },
+      "quantity": 1,
+      "item_price": 100000
+    },
+    {
+      "product_id": {
+        "$oid": "67c5199d7a1f248a2cf7db90"
+      },
+      "quantity": 1,
+      "item_price": 400000
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "67d833df59aa8845924b1ce8"
+  },
+  "customer_id": {
+    "$oid": "67c5e27dfc3a04ed294342e1"
+  },
+  "total_items": 2,
+  "total_price": 500000,
+  "cart_items": [
+    {
+      "product_id": {
+        "$oid": "67c518f07a1f248a2cf7db86"
+      },
+      "quantity": 1,
+      "item_price": 100000
+    },
+    {
+      "product_id": {
+        "$oid": "67c51f617a1f248a2cf7dbb7"
+      },
+      "quantity": 1,
+      "item_price": 400000
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "67d8346a59aa8845924b1cf0"
+  },
+  "customer_id": {
+    "$oid": "67c6bf524469254badc2a878"
+  },
+  "total_items": 4,
+  "total_price": 900000,
+  "cart_items": [
+    {
+      "product_id": {
+        "$oid": "67c518f07a1f248a2cf7db86"
+      },
+      "quantity": 1,
+      "item_price": 100000
+    },
+    {
+      "product_id": {
+        "$oid": "67c51f617a1f248a2cf7dbb7"
+      },
+      "quantity": 2,
+      "item_price": 400000
+    },
+    {
+      "product_id": {
+        "$oid": "67c5199d7a1f248a2cf7db90"
+      },
+      "quantity": 1,
+      "item_price": 400000
+    }
+  ]
+}]
